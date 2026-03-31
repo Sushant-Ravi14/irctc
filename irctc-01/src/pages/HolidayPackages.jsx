@@ -28,7 +28,7 @@ const HolidayPackages = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
       <main style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
-        <div className="glass" style={{ borderRadius: '24px', padding: '56px', textAlign: 'center', maxWidth: '500px' }}>
+        <div className="glass" style={{ borderRadius: '24px', padding: 'clamp(28px,4vw,56px) clamp(20px,4vw,48px)', textAlign: 'center', maxWidth: '500px', width: '100%' }}>
           <div style={{ fontSize: '3.5rem', marginBottom: '16px' }}>✈️</div>
           <CheckCircle size={52} color="#4ade80" style={{ marginBottom: '16px' }} />
           <h2 style={{ color: '#4ade80', fontWeight: 900, fontSize: '1.5rem', marginBottom: '12px' }}>Package Booked!</h2>
@@ -45,7 +45,7 @@ const HolidayPackages = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <h1 style={{ fontSize: '2.2rem', fontWeight: 900, color: 'var(--text-main)', marginBottom: '8px' }}>🌏 Holiday <span style={{ color: 'var(--orange-primary)' }}>Packages</span></h1>

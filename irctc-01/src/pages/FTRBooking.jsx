@@ -30,7 +30,7 @@ const FTRBooking = () => {
           </div>
 
           {/* Info Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '32px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
             {[
               { icon: '🚆', title: 'Full Train', desc: 'Book an entire train for large groups (500–1200 passengers)' },
               { icon: '🚃', title: 'FTR Coach', desc: 'Book individual coaches attached to scheduled trains' },
@@ -45,9 +45,9 @@ const FTRBooking = () => {
           </div>
 
           {!submitted ? (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
               {/* Booking Form */}
-              <div className="glass" style={{ borderRadius: '20px', padding: '32px' }}>
+              <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,32px)', flex: '1 1 280px', minWidth: '260px' }}>
                 <h2 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.1rem', marginBottom: '24px' }}>📋 Booking Request</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <div>
@@ -92,7 +92,7 @@ const FTRBooking = () => {
               </div>
 
               {/* Available Trains */}
-              <div className="glass" style={{ borderRadius: '20px', padding: '32px' }}>
+              <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,32px)', flex: '1 1 280px', minWidth: '260px' }}>
                 <h2 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.1rem', marginBottom: '24px' }}>🚆 Available FTR Trains</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {ftrTrains.map(t => (

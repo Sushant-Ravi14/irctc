@@ -33,7 +33,7 @@ const CancelTicket = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '48px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <main style={{ flex: 1, padding: 'clamp(28px,5vw,48px) clamp(12px,3vw,20px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ width: '100%', maxWidth: '700px' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ width: '64px', height: '64px', background: 'rgba(239,68,68,0.15)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
@@ -43,10 +43,10 @@ const CancelTicket = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Enter your PNR to view and cancel your booking</p>
           </div>
 
-          <div className="glass" style={{ borderRadius: '20px', padding: '36px' }}>
-            <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
-              <input type="text" className="custom-input" placeholder="Enter 10-digit PNR number" maxLength={10} value={pnr} onChange={e => setPnr(e.target.value.replace(/\D/g,''))} style={{ flex: 1, fontSize: '1rem' }} />
-              <button className="btn-primary" onClick={handleSearch} style={{ padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap' }}>
+          <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,36px)' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '24px' }}>
+              <input type="text" className="custom-input" placeholder="Enter 10-digit PNR number" maxLength={10} value={pnr} onChange={e => setPnr(e.target.value.replace(/\D/g,''))} style={{ flex: '1 1 200px', fontSize: '1rem' }} />
+              <button className="btn-primary" onClick={handleSearch} style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
                 <Search size={18} /> Search
               </button>
             </div>
@@ -57,7 +57,7 @@ const CancelTicket = () => {
               <div>
                 <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '14px', padding: '20px', marginBottom: '20px', border: '1px solid var(--border-glass)' }}>
                   <div style={{ fontWeight: 700, color: 'var(--orange-primary)', marginBottom: '12px', fontSize: '1rem' }}>PNR: {pnr}</div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '10px' }}>
                     {[['Train', ticket.train], ['From', ticket.from], ['To', ticket.to], ['Date', ticket.date], ['Class', ticket.class], ['Fare Paid', '₹' + ticket.fare]].map(([l, v]) => (
                       <div key={l}><div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>{l}</div><div style={{ color: 'var(--text-main)', fontWeight: 600 }}>{v}</div></div>
                     ))}

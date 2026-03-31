@@ -38,11 +38,11 @@ const AboutEWallet = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
 
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
           {/* Hero Section */}
-          <div className="glass" style={{ borderRadius: '24px', padding: '56px 48px', marginBottom: '32px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+          <div className="glass" style={{ borderRadius: '24px', padding: 'clamp(28px,5vw,56px) clamp(20px,4vw,48px)', marginBottom: '32px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', backgroundColor: 'rgba(255,109,0,0.08)', borderRadius: '50%' }} />
             <div style={{ position: 'absolute', bottom: '-60px', left: '-40px', width: '250px', height: '250px', backgroundColor: 'rgba(255,109,0,0.05)', borderRadius: '50%' }} />
             <div style={{ width: '80px', height: '80px', backgroundColor: 'rgba(255,109,0,0.15)', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', border: '1px solid rgba(255,109,0,0.3)' }}>
@@ -80,10 +80,10 @@ const AboutEWallet = () => {
           </div>
 
           {/* Benefits + Balance Info */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '32px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', marginBottom: '32px' }}>
 
             {/* Benefits */}
-            <div className="glass" style={{ borderRadius: '20px', padding: '32px 28px' }}>
+            <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,32px) clamp(16px,2vw,28px)', flex: '1 1 300px', minWidth: '260px' }}>
               <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '24px' }}>
                 ✅ Key Benefits
               </h2>
@@ -98,7 +98,7 @@ const AboutEWallet = () => {
             </div>
 
             {/* Balance / Limits */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', flex: '1 1 240px', minWidth: '220px' }}>
               <div className="glass" style={{ borderRadius: '20px', padding: '28px', flex: 1 }}>
                 <h2 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '20px' }}>💳 Wallet Limits</h2>
                 {[
@@ -128,7 +128,7 @@ const AboutEWallet = () => {
           </div>
 
           {/* FAQs */}
-          <div className="glass" style={{ borderRadius: '20px', padding: '36px 32px' }}>
+          <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(20px,3vw,36px) clamp(16px,2vw,32px)' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '28px', display: 'flex', alignItems: 'center', gap: '12px' }}>
               <HelpCircle size={24} color="var(--orange-primary)" /> Frequently Asked Questions
             </h2>

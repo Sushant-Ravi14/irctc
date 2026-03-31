@@ -29,9 +29,9 @@ const PNREnquiry = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '60px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <main style={{ flex: 1, padding: 'clamp(28px,5vw,60px) clamp(12px,3vw,20px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         
-        <div className="glass" style={{ width: '100%', maxWidth: '700px', borderRadius: '24px', padding: '48px 40px' }}>
+        <div className="glass" style={{ width: '100%', maxWidth: '700px', borderRadius: '24px', padding: 'clamp(24px,4vw,48px) clamp(16px,3vw,40px)' }}>
           <h1 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '8px', color: 'var(--text-main)' }}>
             PNR Enquiry
           </h1>
@@ -39,7 +39,7 @@ const PNREnquiry = () => {
             Enter your 10-digit PNR number to check booking status
           </p>
 
-          <div style={{ display: 'flex', gap: '12px', marginBottom: '32px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '32px' }}>
             <input
               type="text"
               className="custom-input"
@@ -47,9 +47,9 @@ const PNREnquiry = () => {
               maxLength={10}
               value={pnr}
               onChange={e => setPnr(e.target.value.replace(/\D/g, ''))}
-              style={{ flex: 1, fontSize: '1rem' }}
+              style={{ flex: '1 1 200px', fontSize: '1rem' }}
             />
-            <button className="btn-primary" onClick={handleCheck} style={{ padding: '12px 28px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap' }}>
+            <button className="btn-primary" onClick={handleCheck} style={{ padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
               <Search size={18} /> Get Status
             </button>
           </div>
@@ -59,7 +59,7 @@ const PNREnquiry = () => {
               <h3 style={{ color: 'var(--orange-primary)', fontWeight: 700, marginBottom: '20px', fontSize: '1.1rem' }}>
                 PNR: {result.pnr}
               </h3>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '14px' }}>
                 {[
                   ['Train', `${result.trainNo} - ${result.trainName}`],
                   ['From', result.from],

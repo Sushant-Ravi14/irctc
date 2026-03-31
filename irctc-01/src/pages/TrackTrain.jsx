@@ -25,7 +25,7 @@ const TrackTrain = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '48px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <main style={{ flex: 1, padding: 'clamp(28px,5vw,48px) clamp(12px,3vw,20px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ width: '100%', maxWidth: '800px' }}>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ width: '64px', height: '64px', background: 'rgba(96,165,250,0.15)', border: '1px solid rgba(96,165,250,0.3)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
@@ -35,17 +35,17 @@ const TrackTrain = () => {
             <p style={{ color: 'var(--text-muted)' }}>Get real-time live running status of any train</p>
           </div>
 
-          <div className="glass" style={{ borderRadius: '20px', padding: '36px', marginBottom: '24px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr auto', gap: '12px', alignItems: 'end' }}>
-              <div>
+          <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,36px)', marginBottom: '24px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'end' }}>
+              <div style={{ flex: '1 1 180px', minWidth: '140px' }}>
                 <label style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, display: 'block', marginBottom: '6px' }}>Train Number</label>
                 <input type="text" className="custom-input" placeholder="e.g. 12301" value={trainNo} onChange={e => setTrainNo(e.target.value)} style={{ fontSize: '1rem' }} />
               </div>
-              <div>
+              <div style={{ flex: '1 1 140px', minWidth: '120px' }}>
                 <label style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 600, display: 'block', marginBottom: '6px' }}>Date of Journey</label>
                 <input type="date" className="custom-input" value={date} onChange={e => setDate(e.target.value)} style={{ fontSize: '0.9rem', colorScheme: 'dark' }} />
               </div>
-              <button className="btn-primary" onClick={handleSearch} style={{ padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <button className="btn-primary" onClick={handleSearch} style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
                 <Search size={18} /> Track
               </button>
             </div>

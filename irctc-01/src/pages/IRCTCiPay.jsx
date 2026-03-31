@@ -24,11 +24,11 @@ const IRCTCiPay = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
           {/* Hero */}
-          <div style={{ background: 'linear-gradient(135deg, #0f1b35 0%, #162448 50%, #0a1628 100%)', borderRadius: '28px', padding: '56px 48px', marginBottom: '32px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+          <div style={{ background: 'linear-gradient(135deg, #0f1b35 0%, #162448 50%, #0a1628 100%)', borderRadius: '28px', padding: 'clamp(28px,5vw,56px) clamp(20px,4vw,48px)', marginBottom: '32px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
             <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '240px', height: '240px', borderRadius: '50%', background: 'rgba(255,109,0,0.06)' }} />
             <div style={{ position: 'absolute', bottom: '-40px', left: '-40px', width: '180px', height: '180px', borderRadius: '50%', background: 'rgba(96,165,250,0.05)' }} />
             
@@ -55,7 +55,7 @@ const IRCTCiPay = () => {
           </div>
 
           {/* Key Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginBottom: '32px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px', marginBottom: '32px' }}>
             {[
               { val: '₹50,000', label: 'Max Balance (KYC)', icon: '💰' },
               { val: '₹10,000', label: 'Without KYC', icon: '🆔' },
@@ -87,7 +87,7 @@ const IRCTCiPay = () => {
           </div>
 
           {/* How to Get Started */}
-          <div className="glass" style={{ borderRadius: '20px', padding: '36px' }}>
+          <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(20px,3vw,36px)' }}>
             <h2 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.3rem', marginBottom: '28px', textAlign: 'center' }}>🚀 How to Get Started</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
               {steps.map((s, i) => (

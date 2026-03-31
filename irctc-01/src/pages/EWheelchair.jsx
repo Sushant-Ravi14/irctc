@@ -26,7 +26,7 @@ const EWheelchair = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
 
           {/* Header */}
@@ -39,7 +39,7 @@ const EWheelchair = () => {
           </div>
 
           {/* Info Banner */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '28px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '16px', marginBottom: '28px' }}>
             {[
               { icon: '🆓', title: 'Free of Cost', desc: 'Wheelchair service is completely free for all passengers' },
               { icon: '⏰', title: 'Book 24h Prior', desc: 'Request at least 24 hours before your journey date' },
@@ -54,9 +54,9 @@ const EWheelchair = () => {
           </div>
 
           {!submitted ? (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
               {/* Booking Form */}
-              <div className="glass" style={{ borderRadius: '20px', padding: '32px' }}>
+              <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,32px)', flex: '1 1 280px', minWidth: '260px' }}>
                 <h2 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.1rem', marginBottom: '24px' }}>📋 Book Wheelchair Assistance</h2>
                 {error && <div style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '10px', padding: '10px 14px', color: '#f87171', marginBottom: '16px', display: 'flex', gap: '8px', alignItems: 'center', fontSize: '0.83rem' }}><AlertCircle size={15} />{error}</div>}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
@@ -70,7 +70,7 @@ const EWheelchair = () => {
               </div>
 
               {/* Wheelchair Types */}
-              <div className="glass" style={{ borderRadius: '20px', padding: '32px' }}>
+              <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(18px,3vw,32px)', flex: '1 1 280px', minWidth: '260px' }}>
                 <h2 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.1rem', marginBottom: '24px' }}>🦽 Wheelchair Types</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {wheelchairTypes.map(w => (
@@ -96,7 +96,7 @@ const EWheelchair = () => {
               </div>
             </div>
           ) : (
-            <div className="glass" style={{ borderRadius: '20px', padding: '56px', textAlign: 'center' }}>
+            <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(28px,4vw,56px)', textAlign: 'center' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>♿</div>
               <CheckCircle size={52} color="#4ade80" style={{ marginBottom: '16px' }} />
               <h2 style={{ color: '#4ade80', fontWeight: 900, fontSize: '1.5rem', marginBottom: '12px' }}>Request Submitted!</h2>

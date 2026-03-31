@@ -60,7 +60,7 @@ const ConnectingJourneyModal = ({ onClose }) => {
           </p>
 
           {/* Warning boxes */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '16px' }}>
+          <div className="cj-warnings-grid">
             {[
               { icon: '⏱️', title: 'Allow Transfer Time', desc: 'Consider time needed to change platform or station' },
               { icon: '🚌', title: 'Transport Margin', desc: 'Account for traffic, transport availability between stations' },
@@ -80,13 +80,17 @@ const ConnectingJourneyModal = ({ onClose }) => {
           <hr style={{ borderColor: '#e5e7eb', marginBottom: '18px' }} />
 
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <button onClick={handleOk} style={{ background: 'linear-gradient(135deg, #FF6D00, #FF9500)', color: '#fff', border: 'none', borderRadius: '10px', padding: '11px 56px', fontWeight: 800, fontSize: '1rem', cursor: 'pointer', boxShadow: '0 4px 16px rgba(255,109,0,0.4)', transition: 'transform 0.2s' }}
+            <button onClick={handleOk} style={{ background: 'linear-gradient(135deg, #FF6D00, #FF9500)', color: '#fff', border: 'none', borderRadius: '10px', padding: '11px 48px', fontWeight: 800, fontSize: '1rem', cursor: 'pointer', boxShadow: '0 4px 16px rgba(255,109,0,0.4)', transition: 'transform 0.2s' }}
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >OK</button>
           </div>
         </div>
       </div>
+      <style>{`
+        .cj-warnings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+        @media (max-width: 480px) { .cj-warnings-grid { grid-template-columns: 1fr; } }
+      `}</style>
     </div>
   );
 };

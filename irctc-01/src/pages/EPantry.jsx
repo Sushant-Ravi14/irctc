@@ -57,7 +57,7 @@ const EPantry = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
@@ -67,7 +67,7 @@ const EPantry = () => {
 
           {/* PNR Step */}
           {!pnrVerified ? (
-            <div className="glass" style={{ borderRadius: '20px', padding: '36px', maxWidth: '600px', margin: '0 auto' }}>
+            <div className="glass" style={{ borderRadius: '20px', padding: 'clamp(20px,3vw,36px)', maxWidth: '600px', margin: '0 auto' }}>
               <h2 style={{ color: 'var(--text-main)', fontWeight: 800, marginBottom: '24px', fontSize: '1.1rem' }}>Step 1: Verify Your Journey</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 <div>

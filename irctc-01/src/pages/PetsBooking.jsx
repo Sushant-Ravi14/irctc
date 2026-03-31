@@ -36,7 +36,7 @@ const PetsBooking = () => {
           {/* Rules Banner */}
           <div className="glass" style={{ borderRadius: '16px', padding: '20px 24px', marginBottom: '28px', border: '1px solid rgba(251,191,36,0.2)', background: 'rgba(251,191,36,0.06)' }}>
             <h3 style={{ color: '#FBBF24', fontWeight: 700, marginBottom: '12px', fontSize: '0.95rem' }}>⚠️ Important Rules & Guidelines</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '8px' }}>
               {[
                 'Pet must travel in the Brake Van / Luggage Van of the train',
                 'Owner must have a valid train ticket (same train & date)',
@@ -58,7 +58,7 @@ const PetsBooking = () => {
           {!submitted ? (
             <div className="glass" style={{ borderRadius: '20px', padding: '36px' }}>
               <h2 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.1rem', marginBottom: '24px' }}>🐕 Pet Travel Request</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '18px' }}>
 
                 <div>
                   <label style={lbl}>From Station *</label>

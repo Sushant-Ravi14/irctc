@@ -55,7 +55,7 @@ const ForeignTouristModal = ({ onClose }) => {
           </div>
 
           {/* Info boxes */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginBottom: '20px' }}>
+          <div className="ftr-info-grid">
             {[
               { icon: '🪪', label: 'Valid Passport Required' },
               { icon: '💱', label: 'Pay in Foreign Currency' },
@@ -71,13 +71,17 @@ const ForeignTouristModal = ({ onClose }) => {
           <hr style={{ borderColor: '#e5e7eb', marginBottom: '20px' }} />
 
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <button onClick={handleOk} style={{ background: 'linear-gradient(135deg, #FF6D00, #FF9500)', color: '#fff', border: 'none', borderRadius: '10px', padding: '11px 56px', fontWeight: 800, fontSize: '1rem', cursor: 'pointer', boxShadow: '0 4px 16px rgba(255,109,0,0.4)', transition: 'transform 0.2s' }}
+            <button onClick={handleOk} style={{ background: 'linear-gradient(135deg, #FF6D00, #FF9500)', color: '#fff', border: 'none', borderRadius: '10px', padding: '11px 48px', fontWeight: 800, fontSize: '1rem', cursor: 'pointer', boxShadow: '0 4px 16px rgba(255,109,0,0.4)', transition: 'transform 0.2s' }}
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >OK</button>
           </div>
         </div>
       </div>
+      <style>{`
+        .ftr-info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+        @media (max-width: 480px) { .ftr-info-grid { grid-template-columns: 1fr; } }
+      `}</style>
     </div>
   );
 };

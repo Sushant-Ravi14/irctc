@@ -19,11 +19,11 @@ const LoginPage = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
 
-      <main style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
-        <div style={{ display: 'flex', gap: '40px', width: '100%', maxWidth: '1000px', alignItems: 'stretch', flexWrap: 'wrap' }}>
+      <main style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(24px,4vw,40px) clamp(12px,3vw,20px)' }}>
+        <div style={{ display: 'flex', gap: 'clamp(20px,3vw,40px)', width: '100%', maxWidth: '1000px', alignItems: 'stretch', flexWrap: 'wrap' }}>
 
           {/* Left: Login Form */}
-          <div className="glass fade-in" style={{ flex: '1 1 380px', borderRadius: '24px', padding: '48px 40px', minWidth: '320px' }}>
+          <div className="glass fade-in" style={{ flex: '1 1 320px', borderRadius: '24px', padding: 'clamp(24px,4vw,48px) clamp(20px,3vw,40px)', minWidth: '280px' }}>
             {/* Logo */}
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '28px' }}>
               <img src="https://www.irctc.co.in/nget/assets/images/logo.png" alt="IRCTC" style={{ height: '50px', objectFit: 'contain', background: 'rgba(255,255,255,0.9)', borderRadius: '10px', padding: '6px 12px' }} />
@@ -123,7 +123,7 @@ const LoginPage = () => {
           </div>
 
           {/* Right: Info Panel */}
-          <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '20px', justifyContent: 'center' }}>
+          <div style={{ flex: '1 1 260px', display: 'flex', flexDirection: 'column', gap: '16px', justifyContent: 'center', minWidth: '240px' }}>
             {[
               { icon: '🚆', title: 'Book Train Tickets', desc: 'Reserve seats across 13,000+ trains with instant confirmation' },
               { icon: '📱', title: 'IRCTC Rail Connect', desc: 'Download the official app for seamless ticket management' },

@@ -68,7 +68,7 @@ const AlertsPage = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
 
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
           {/* Page Title */}
@@ -105,7 +105,7 @@ const AlertsPage = () => {
           <div style={{
             background: 'rgba(255,255,255,0.97)',
             borderRadius: '0 0 12px 12px',
-            padding: '28px 32px',
+            padding: 'clamp(14px,3vw,28px) clamp(14px,3vw,32px)',
             border: '1px solid var(--border-glass)',
             borderTop: '3px solid var(--orange-primary)',
             minHeight: '400px',

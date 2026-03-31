@@ -31,9 +31,9 @@ const TrainSchedule = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
-      <main style={{ flex: 1, padding: '60px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <main style={{ flex: 1, padding: 'clamp(28px,5vw,60px) clamp(12px,3vw,20px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        <div className="glass" style={{ width: '100%', maxWidth: '900px', borderRadius: '24px', padding: '48px 40px' }}>
+        <div className="glass" style={{ width: '100%', maxWidth: '900px', borderRadius: '24px', padding: 'clamp(24px,4vw,48px) clamp(16px,3vw,40px)' }}>
           <h1 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '8px', color: 'var(--text-main)' }}>
             Train Schedule
           </h1>
@@ -41,16 +41,16 @@ const TrainSchedule = () => {
             Enter a train number to view its complete route schedule
           </p>
 
-          <div style={{ display: 'flex', gap: '12px', marginBottom: '36px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '36px' }}>
             <input
               type="text"
               className="custom-input"
               placeholder="Enter Train Number (e.g. 12301)"
               value={trainNo}
               onChange={e => setTrainNo(e.target.value)}
-              style={{ flex: 1, fontSize: '1rem' }}
+              style={{ flex: '1 1 200px', fontSize: '1rem' }}
             />
-            <button className="btn-primary" onClick={handleSubmit} style={{ padding: '12px 28px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap' }}>
+            <button className="btn-primary" onClick={handleSubmit} style={{ padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
               <Train size={18} /> Submit
             </button>
           </div>

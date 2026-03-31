@@ -112,7 +112,7 @@ const EWalletGuide = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
 
-      <main style={{ flex: 1, padding: '40px 20px' }}>
+      <main style={{ flex: 1, padding: 'clamp(20px,4vw,40px) clamp(12px,3vw,20px)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
 
           {/* Header */}
@@ -212,3 +212,4 @@ const EWalletGuide = () => {
 };
 
 export default EWalletGuide;
+

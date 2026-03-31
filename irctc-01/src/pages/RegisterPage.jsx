@@ -57,7 +57,7 @@ const RegisterPage = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--blue-navy)' }}>
       <Navbar />
 
-      <main style={{ flex: 1, padding: '40px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <main style={{ flex: 1, padding: 'clamp(24px,4vw,40px) clamp(12px,3vw,20px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ width: '100%', maxWidth: '800px' }}>
 
           {/* Header */}
@@ -84,7 +84,7 @@ const RegisterPage = () => {
             ))}
           </div>
 
-          <div className="glass fade-in" style={{ borderRadius: '24px', padding: '40px' }}>
+          <div className="glass fade-in" style={{ borderRadius: '24px', padding: 'clamp(20px,4vw,40px)' }}>
 
             {/* === STEP 1: Personal Details === */}
             {step === 1 && (
@@ -92,7 +92,7 @@ const RegisterPage = () => {
                 <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '28px', borderBottom: '1px solid var(--border-glass)', paddingBottom: '14px' }}>
                   👤 Personal Details
                 </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
 
                   <div>
                     <label style={labelStyle}>First Name *</label>
@@ -187,7 +187,7 @@ const RegisterPage = () => {
                     <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px', display: 'block' }}>Alphanumeric, 8–35 characters. Cannot be changed later.</span>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
                     <div>
                       <label style={labelStyle}>Password *</label>
                       <div style={{ position: 'relative' }}>
@@ -211,7 +211,7 @@ const RegisterPage = () => {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
                     <div>
                       <label style={labelStyle}>Security Question *</label>
                       <select className="custom-input" value={form.securityQuestion} onChange={set('securityQuestion')} required style={{ ...inputStyle, appearance: 'none' }}>
